@@ -1,0 +1,27 @@
+<form #userform="ngForm" (ngSubmit)="register()">
+    <div *ngIf="!success" class="container">
+        <label>UserName:</label>
+        <input type="text" name="username" required #usernameControl="ngModel" [(ngModel)]="username"><br>
+        <p *ngIf="usernameControl.touched && usernameControl.invalid">Username required</p>
+        <label>Password:</label>
+        <input type="password" name="password" autocomplete="on" required #passwordControl="ngModel" [(ngModel)]="password"><br>
+        <p  *ngIf="passwordControl.touched && passwordControl.invalid">Password required</p>
+        <label>Email:</label>
+        <input type="Email" name="Email" autocomplete="on" required #EmailControl="ngModel" [(ngModel)]="Email"><br>
+        <p *ngIf="EmailControl.touched && EmailControl.invalid">Email required</p>
+        <label>Phone:</label>
+        <input type="phone" name="phone" autocomplete="on" required #phoneControl="ngModel" [(ngModel)]="phone"><br>
+        <p *ngIf="phoneControl.touched && phoneControl.invalid">Phone Number required</p>
+    
+        <p *ngIf="userform.invalid && onClick">Enter the correct credentials</p>
+        <p *ngIf="userexist">UserAlready exists</p><br>
+        <button [disabled]="!userform.valid"
+        class="btn btn-success"
+        type="submit">Register</button><br>
+    </div>
+    
+    
+    </form>
+    
+    <h1 *ngIf="success">LogOut to Register for New User</h1>
+    

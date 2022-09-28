@@ -1,0 +1,19 @@
+<h1>Books Available</h1>
+<div class="container">
+    <div *ngFor="let ele of book" class="row">
+        <div class="col-12 book text-center">
+            <img src="../../assets/{{ele.imageLink}}"  width="150" height="100">
+            <p style="size:200px ;">Title : {{ele.title}}</p>
+            <p>Author : {{ele.author}}</p>
+            <p>Language : {{ele.language}}</p>
+            <p>Pages : {{ele.pages}}</p>
+            <p>Year : {{ele.year}}</p>
+            <p>Country : {{ele.country}}</p>
+            
+          <button (click)="wishList(ele)" class="btn btn-success">WishList</button>
+          <br>
+          <br>
+          <button (click)="completed(ele)" class="btn btn-success">Completed</button>
+        </div>
+    </div>
+</div>

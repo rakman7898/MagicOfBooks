@@ -1,0 +1,28 @@
+.book{
+    width:100%;
+    height:500px;
+    border-radius:15px;
+    border-color:black;
+    border-style:solid;
+    padding-top:20px;
+    display: flexbox;
+}
+.row{
+    padding:40px;
+}
+h1{
+    /* color:lightcoral; */
+    color: black;
+    text-align: center;
+}
+p{
+
+    color: black;
+    
+}
+
+.col-12{
+    background-color: skyblue;
+    font-size: large;
+}
+
